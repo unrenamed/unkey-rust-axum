@@ -1,0 +1,22 @@
+[package]
+name = "unkey-rust-axum"
+version = "0.1.0"
+edition = "2021"
+authors = ["unrenamed <renkonazbka@gmail.com>"]
+description = "A Rust API service using Unkey for API key validation with the Axum framework."
+license = "MIT"
+repository = "https://github.com/unrenamed/unkey-rust-axum"
+readme = "README.md"
+keywords = ["API", "Unkey", "Axum", "Rust", "Key validation", "Typed headers"]
+categories = ["api-bindings", "web-programming", "security"]
+
+[dependencies]
+dotenv = "0.15"
+unkey = "0.4.0"
+axum = "0.7.7"
+axum-extra = { version = "0.9.4", features = ["typed-header"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
