@@ -43,7 +43,7 @@ UNKEY_API_ID=your-unkey-api-id
 
 Ensure you replace `your-unkey-root-key` and `your-unkey-api-id` with your actual Unkey credentials.
 
-4. Start the server:
+3. Start the server:
 
 ```bash
 cargo run
@@ -51,19 +51,19 @@ cargo run
 
 The server will start and listen on the port specified in the `.env` file (default is `3000`).
 
-5. Test the public route as a guest:
+4. Test the public route as a guest:
 
 ```bash
   curl http://localhost:3000/public
 ```
 
-6. Test the public route as an authorized user by passing the API key in the header:
+5. Test the public route as an authorized user by passing the API key in the header:
 
 ```bash
   curl http://localhost:3000/public -H "Authorization: Bearer <YOUR_API_KEY>"
 ```
 
-7. Test the protected route, which requires valid authorization:
+6. Test the protected route, which requires valid authorization:
 
 ```bash
   curl http://localhost:3000/protected -H "Authorization: Bearer <YOUR_API_KEY>"
